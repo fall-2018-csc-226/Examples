@@ -1,0 +1,27 @@
+4
+Scott
+Hometown: New Virginia, IA
+41.156537
+-93.7107200
+darkblue
+Scott
+Awesome city: Edinburgh, Scotland
+55.950190
+-3.187550
+lightgreen
+Emily
+Hometown: Pittsburgh, PA
+40.932850
+-80.358543
+orange
+Emily
+Most Interesting Place: Reykjavik, Iceland
+64.147210
+-21.942400
+red
+
+
+# NOTES:
+# 1) The first number represents the number of entries in the file. Make sure you update that number if you add more.
+# 2) No spaces between entries! The code doesn't handle blank lines.
+# 3) Don't forget the type of data for each line as you create the code
