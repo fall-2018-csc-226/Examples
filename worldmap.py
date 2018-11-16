@@ -24,7 +24,6 @@ class WorldMap:
     def __init__(self, input_file):
         self.filename = input_file
         self.file_content = ""
-        self.wn = turtle.Screen()
         self.pin = turtle.Turtle()
         self.place = None
         self.all_places = []
