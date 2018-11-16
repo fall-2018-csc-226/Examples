@@ -1,8 +1,8 @@
 ######################################################################
-# Author: Emily Lovell & Scott Heggen      TODO: Change this to your names
-# Username: lovelle & heggens             TODO: Change this to your usernames
+# Author: Emily Lovell & Scott Heggen
+# Username: lovelle & heggens
 #
-# Assignment: T10: Oh, the Places You'll Go!
+# Assignment: T10: Oh, the Places You'll Go! (Refactored!)
 #
 # Purpose:  To create a map of locations
 #           where the user is originally from or has visited,
@@ -20,8 +20,14 @@ import turtle
 from place import *
 
 class WorldMap:
+    """ A class to represent a world map. """
 
     def __init__(self, input_file):
+        """
+        Creates a new world map, given a specified input file.
+
+        :param input_file: Input filename (containing a list of places).
+        """
         self.filename = input_file
         self.file_content = ""
         self.pin = turtle.Turtle()
@@ -37,13 +43,8 @@ class WorldMap:
         """
         Iterates through the file, and creates the list of places
 
-        :param filename: the name of the file to be opened
-        :return: a list representing multiple places
+        :return: None
         """
-
-        #####################################################
-        # You do not need to modify this function!
-        #####################################################
 
         self.file_content = open(self.filename, 'r')           # Opens file for reading
 
@@ -59,7 +60,11 @@ class WorldMap:
         self.file_content.close()
 
     def place_all_pins(self):
-        # Iterates through each item in the place_list list, calling the place_pin() function
+        """
+        Iterates through each item in the place_list list, calling the place_pin() function
+
+        :return: None
+        """
         for place in self.all_places:
             self.place_pin(place)  # Adds ONE place to the map for each loop iteration
 
@@ -68,14 +73,9 @@ class WorldMap:
         """
         This function places a pin on the world map.
 
-        :param window: the window object where the pin will be placed
         :param place: a tuple object describing a place to be put on the map
         :return: None
         """
-
-        #####################################################
-        # You do not need to modify this function!
-        #####################################################
 
         self.pin.penup()
 
@@ -104,14 +104,13 @@ def main():
     :return: None
     """
 
-    # The next three lines set up the world map
-
     # A sample file was created for you to use here: places.txt
     in_file = input("Enter the name of the file: ")
 
-    wm = WorldMap(in_file)
+    # The next three lines set up the world map
+    wm = WorldMap(in_file) # makes a new WorldMap object, using a specified input file
     wm.parse_file()        # generates place_list from the file
-    wm.place_all_pins()
+    wm.place_all_pins()    # places all pins on the map
 
     print("Map created!")
     wm.wn.exitonclick()
