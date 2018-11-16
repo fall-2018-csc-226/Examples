@@ -20,6 +20,7 @@ import turtle
 from place import *
 
 class WorldMap:
+
     def __init__(self, input_file):
         self.filename = input_file
         self.file_content = ""
@@ -91,9 +92,6 @@ class WorldMap:
 
         text = "{0}'s place:\n    {1}".format(place.name, place.location)   # Setting up pin label
         self.pin.write(text, font=("Arial", 10, "bold"))                 # Stamps the text describing the location
-
-
-
 
 
 
